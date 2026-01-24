@@ -1,0 +1,73 @@
+{
+  "name": "ott-iptv-qa-test-suite",
+  "version": "1.0.0",
+  "description": "Comprehensive QA and Test Framework for OTT/IPTV Client Applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:playwright && npm run test:cypress",
+    "test:playwright": "playwright test",
+    "test:playwright:headed": "playwright test --headed",
+    "test:playwright:debug": "playwright test --debug",
+    "test:playwright:ui": "playwright test --ui",
+    "test:cypress": "cypress run",
+    "test:cypress:open": "cypress open",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:regression:auth": "playwright test tests/auth/",
+    "test:regression:livetv": "playwright test tests/livetv/",
+    "test:regression:vod": "playwright test tests/vod/",
+    "test:regression:search": "playwright test tests/search/",
+    "test:regression:crossbrowser": "playwright test --project=chromium --project=firefox --project=webkit",
+    "test:regression:performance": "playwright test tests/performance/",
+    "test:network": "playwright test tests/network/",
+    "test:performance": "npm run test:lighthouse && npm run test:k6",
+    "test:lighthouse": "lighthouse https://example.com --output=html --output-path=./performance-tests/lighthouse-report.html",
+    "test:k6": "k6 run performance-tests/load-test.js",
+    "test:headless": "playwright test --headed=false",
+    "report": "playwright show-report",
+    "install:browsers": "playwright install",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.{js,json,md}\"",
+    "pretest": "npm run lint"
+  },
+  "keywords": [
+    "ott",
+    "iptv",
+    "qa",
+    "testing",
+    "automation",
+    "playwright",
+    "cypress",
+    "streaming",
+    "video",
+    "e2e"
+  ],
+  "author": "Damla Alper",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.41.0",
+    "@types/node": "^20.11.0",
+    "cypress": "^13.6.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-playwright": "^0.20.0",
+    "lighthouse": "^11.4.0",
+    "prettier": "^3.2.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ott-iptv-qa-test-suite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/ott-iptv-qa-test-suite/issues"
+  },
+  "homepage": "https://github.com/yourusername/ott-iptv-qa-test-suite#readme"
+}
