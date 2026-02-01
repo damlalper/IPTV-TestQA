@@ -64,13 +64,13 @@ npm run report            # View results
 - Custom commands for reusable actions
 - Cross-browser compatibility
 
-#### Load Testing (1 script)
-- k6 load test: 50 → 100 concurrent users
-- API performance testing
+#### Load Testing (2 scripts)
+- **k6**: Load test 50 → 100 concurrent users
+- **Artillery**: Backend API regression & load testing
 - Custom metrics tracking
 
 ### 📝 Test Documentation (65+ Cases)
-- **25 Manual Test Cases** - Authentication, Live TV, VOD, Search, Favorites
+- **25 Manual Test Cases** - Web and Mobile Applications, Authentication, Live TV, VOD
 - **40 Regression Tests** - Smoke, functional, cross-browser, performance
 
 ### 📚 Professional Documentation (100+ Pages)
@@ -275,6 +275,10 @@ npx playwright show-trace test-results/trace.zip
 - **Node.js** v18+ - Runtime environment
 - **JavaScript** - Test scripting language
 - **GitHub Actions** - CI/CD automation
+
+### Recommended Tools
+- **Visual Studio Code** - Primary IDE
+- **Cursor IDE** - AI-powered development (Plus)
 
 ### Testing Patterns
 - **Page Object Model** - Maintainable test architecture

@@ -28,13 +28,13 @@
 
 ## Environment Details
 
-**Application Version:** [e.g., v1.2.3]
+**Application Version:** [Web v1.2.3 / Mobile App v2.0.1]
 **Test Environment:** [Production / Staging / Development]
 **Browser:** [Chrome 120 / Firefox 115 / Edge 110 / Safari 17]
-**Operating System:** [Windows 11 / macOS Sonoma / Ubuntu 22.04]
-**Screen Resolution:** [1920x1080 / 1366x768 / etc.]
+**Device Model:** [iPhone 15 / Samsung S23 / Pixel 8 / Desktop]
+**Operating System:** [Windows 11 / macOS Sonoma / iOS 17 / Android 14]
+**Screen Resolution:** [1920x1080 / 390x844 / etc.]
 **Network Condition:** [Normal / Slow 3G / 4G / etc.]
-**Device Type:** [Desktop / Mobile / Tablet]
 
 ---
 

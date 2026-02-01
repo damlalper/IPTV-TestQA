@@ -1,0 +1,77 @@
+config:
+  target: "http://localhost:4000/api"
+  phases:
+    - duration: 60
+      arrivalRate: 5
+      name: "Warm up"
+    - duration: 120
+      arrivalRate: 10
+      rampTo: 50
+      name: "Ramp up load"
+    - duration: 300
+      arrivalRate: 50
+      name: "Sustained load"
+  plugins:
+    ensure: {}
+    apdex: {}
+    metrics-by-endpoint: {}
+  ensure:
+    thresholds:
+      - http.response_time.p95: 100
+      - http.response_time.p99: 200
+  defaults:
+    headers:
+      Content-Type: "application/json"
+
+scenarios:
+  - name: "API Regression & Load Test"
+    flow:
+      - log: "Starting regression flow..."
+      - post:
+          url: "/auth/login"
+          json:
+            email: "{{ $processEnvironment.TEST_USER_EMAIL }}"
+            password: "{{ $processEnvironment.TEST_USER_PASSWORD }}"
+          capture:
+            - json: "$.token"
+              as: "token"
+          expect:
+            - statusCode: 200
+            - contentType: json
+
+      - think: 1
+
+      - get:
+          url: "/channels"
+          headers:
+            Authorization: "Bearer {{ token }}"
+          expect:
+            - statusCode: 200
+            - contentType: json
+
+      - think: 2
+
+      - get:
+          url: "/vod"
+          headers:
+            Authorization: "Bearer {{ token }}"
+          expect:
+            - statusCode: 200
+
+      - think: 1
+
+      - get:
+          url: "/user/favorites"
+          headers:
+            Authorization: "Bearer {{ token }}"
+          expect:
+            - statusCode: 200
+
+      - think: 1
+      
+      - post:
+          url: "/auth/logout"
+          headers:
+            Authorization: "Bearer {{ token }}"
+          expect:
+            - statusCode: 200

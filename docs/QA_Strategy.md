@@ -413,6 +413,20 @@ What actually happens
 - Smoke tests in production
 - Monitor error rates and metrics
 
+### 11.3 Release Planning & Collaboration
+
+#### Release Planning Participation
+- Review requirements and acceptance criteria early in the cycle
+- Estimate QA effort for sprint planning
+- Define Go/No-Go criteria for production deployment
+- Verify bug fixes before release candidates
+
+#### Developer Collaboration
+- Participate in design reviews to identify testability issues
+- Provide immediate feedback on new features
+- Pair testing with developers on complex features
+- Share reproduction steps for all reported bugs
+
 ---
 
 ## 12. Metrics and Reporting

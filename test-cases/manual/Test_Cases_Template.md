@@ -585,6 +585,51 @@ Each test case follows this structure:
 
 ---
 
+## 8. Mobile Application Test Cases
+
+### TC-801: Mobile Responsive Layout
+- **Feature:** Mobile UI
+- **Test Scenario:** Verify application layout on mobile devices
+- **Priority:** Critical
+- **Test Type:** Functional, UI
+- **Prerequisites:** Access via mobile device or simulator
+
+**Test Steps:**
+1. Open application on mobile browser (iOS/Android)
+2. Verify header and navigation menu collapse correctly
+3. Check video player aspect ratio
+4. Verify touch interactions (tap, swipe)
+
+**Expected Result:**
+- Layout adapts to screen size
+- No horizontal scrolling required
+- Touch targets are large enough (>44px)
+- Video player uses native controls where appropriate
+
+**Actual Result:** _[To be filled during execution]_
+**Status:** _[Not Executed]_
+
+### TC-802: Background Playback (Mobile)
+- **Feature:** Mobile Playback
+- **Test Scenario:** Verify behavior when app moves to background
+- **Priority:** Medium
+- **Test Type:** Functional
+- **Prerequisites:** Mobile device
+
+**Test Steps:**
+1. Start playing video on mobile
+2. Press Home button to minimize app
+3. Lock screen
+4. Resume app
+
+**Expected Result:**
+- Video pauses when minimized (or continues if background play supported)
+- Application state preserved upon resume
+- Battery usage is optimized
+
+**Actual Result:** _[To be filled during execution]_
+**Status:** _[Not Executed]_
+
 ## Test Case Summary
 
 | Priority | Total Test Cases |

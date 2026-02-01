@@ -79,7 +79,7 @@ Testing will cover all critical user-facing features of the OTT/IPTV client incl
 #### Performance Testing
 - **Scope:** Load times, video startup, buffering
 - **Approach:** Benchmark measurements
-- **Tools:** Lighthouse, k6, browser DevTools
+- **Tools:** Lighthouse, k6, Artillery, browser DevTools
 
 #### Network Testing
 - **Scope:** Various network conditions
